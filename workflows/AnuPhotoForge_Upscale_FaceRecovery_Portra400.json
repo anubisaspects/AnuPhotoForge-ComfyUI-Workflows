@@ -1,0 +1,62 @@
+{
+  "last_node_id": 20,
+  "last_link_id": 30,
+  "nodes": [
+    {
+      "id": 1,
+      "type": "LoadImage",
+      "pos": [50, 100],
+      "size": [315, 314],
+      "outputs": [{"name": "IMAGE", "type": "IMAGE", "links": [1], "slot_index": 0}],
+      "widgets_values": ["original_selfie.png"]
+    },
+    {
+      "id": 2,
+      "type": "UpscaleModelLoader",
+      "pos": [50, 450],
+      "size": [315, 58],
+      "outputs": [{"name": "UPSCALE_MODEL", "type": "UPSCALE_MODEL", "links": [2], "slot_index": 0}],
+      "widgets_values": ["4x-UltraSharp.pth"]
+    },
+    {
+      "id": 3,
+      "type": "ImageUpscaleWithModel",
+      "pos": [400, 200],
+      "size": [315, 106],
+      "inputs": [
+        {"name": "upscale_model", "type": "UPSCALE_MODEL", "link": 2},
+        {"name": "image", "type": "IMAGE", "link": 1}
+      ],
+      "outputs": [{"name": "IMAGE", "type": "IMAGE", "links": [3], "slot_index": 0}]
+    },
+    {
+      "id": 4,
+      "type": "FaceDetailer",
+      "pos": [800, 100],
+      "size": [500, 700],
+      "inputs": [
+        {"name": "image", "type": "IMAGE", "link": 3}
+      ],
+      "outputs": [{"name": "image", "type": "IMAGE", "links": [4], "slot_index": 0}],
+      "widgets_values": [512, true, 1024, 0, "fixed", 20, 3.5, "dpmpp_2m", "karras", 0.25, 5, true, true, 1.8, 8, 2, "center-1", 0, 0.95, 0, 0.8, "False", 10, "high fidelity face recovery no feature changes", 1, false, 15]
+    },
+    {
+      "id": 5,
+      "type": "SaveImage",
+      "pos": [1400, 200],
+      "size": [315, 270],
+      "inputs": [{"name": "images", "type": "IMAGE", "link": 4}],
+      "widgets_values": ["AnuPhotoForge_Upscaled_FaceRecovered_PortraReady"]
+    }
+  ],
+  "links": [
+    [1, 1, 0, 3, 1, "IMAGE"],
+    [2, 2, 0, 3, 0, "UPSCALE_MODEL"],
+    [3, 3, 0, 4, 0, "IMAGE"],
+    [4, 4, 0, 5, 0, "IMAGE"]
+  ],
+  "groups": [
+    {"title": "Upscale + Exact Face Recovery (Inspired by User Request)", "bounding": [30, 50, 1800, 800], "color": "#8A8", "font_size": 22}
+  ],
+  "version": 0.4
+}
