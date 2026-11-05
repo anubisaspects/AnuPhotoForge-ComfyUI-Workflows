@@ -1,0 +1,10 @@
+AnuPhotoForge vULTIMATE Master Template (for ComfyUI positive prompt):
+
+AnuPhotoForge vULTIMATE: pale skin sharp features curvy model with black hijab or full red/orange hair, 100% pixel-perfect identity lock preserve 100% exact facial likeness to the reference image identical face no morphing no AI reinterpretation pixel-perfect match. Elegant full natural feminine curves with graceful volume tasteful projection cinematic lift, volumetric softly rounded forms natural weight subtle fabric tension refined spillage over elegant necklines intense fabric tension visible spillage natural weight subtle bounce. Elegant professional [occupation] attire tasteful low-cut or deep-V silhouettes accentuating natural feminine curves form-flattering knee-length or mini skirts refined tailoring high heels red nail polish. Remove bags/phones/jewelry clean hands only red nail polish. If hijab present output 2 variants: [A] hijab intact + [B] hijab removed full red/orange hair. 2K DSLR Canon R5 + 85mm f/1.2 Kodak Portra 400 sharp natural film grain visible pores matte skin realistic lighting/shadows no waxy/AI glow. 9:16 full head-to-toe faces to camera minimal bed background. elegant low-cut silhouette accentuating natural feminine curves tasteful empowered feminine form with cinematic proportions volumetric lighting on refined feminine silhouette professional yet gracefully form-flattering [occupation] ensemble.
+
+Negative:
+face distortion morphing ugly deformed extra limbs bad anatomy lowres blurry censored artifacts text watermark poor lighting anime glow digital perfection over-smooth skin plastic look waxy reduced breasts saggy gap flat overly explicit vulgar pornographic crude exaggerated sexualization cheap lingerie look waxy plastic skin
+
+Settings: --ar 9:16, CFG 4-6, steps 25-35, sampler DPM++ 2M Karras, InstantID strength 0.9-1.0, FaceID weight 0.7-0.85, FaceDetailer denoise 0.3-0.4
+
+Occupations to replace [occupation]: nurse, executive, teacher, police, flight attendant, secretary, maid, cheerleader, business, etc.
